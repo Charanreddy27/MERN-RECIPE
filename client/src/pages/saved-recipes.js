@@ -21,6 +21,7 @@ export const SavedRecipes = () => {
     fetchSavedRecipes();
   }, []);
   return (
+    <div className="recipe-base">
     <div>
       <h1>Saved Recipes</h1>
       <ul>
@@ -35,6 +36,7 @@ export const SavedRecipes = () => {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 };

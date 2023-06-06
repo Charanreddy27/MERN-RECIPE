@@ -28,6 +28,7 @@ export const Login = () => {
     };
   
     return (
+      <div className="recipe-base">
       <div className="auth-container">
         <form onSubmit={handleSubmit}>
           <h2>Login</h2>
@@ -54,6 +55,7 @@ export const Login = () => {
           <br/>
           <h2> Not an User..?  <button className="button-switch"><Link to="/signup">Signup</Link></button></h2>
         </form>
+      </div>
       </div>
     );
   };

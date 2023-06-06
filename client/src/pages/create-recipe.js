@@ -55,6 +55,7 @@ export const CreateRecipe = () => {
   };
 
   return (
+    <div className="recipe-base">
     <div className="create-recipe">
       <h2>Create Recipe</h2>
       <form onSubmit={handleSubmit}>
@@ -112,6 +113,7 @@ export const CreateRecipe = () => {
         <br/>
         <button className="button-add" type="submit">Create Recipe</button>
       </form>
+    </div>
     </div>
   );
 };

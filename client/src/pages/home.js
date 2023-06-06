@@ -48,7 +48,8 @@ export const Home = () => {
   const isRecipeSaved = (id) => savedRecipes.includes(id);
 
   return (
-    <div>
+    <div className="recipe-base">
+      <div>
       <h1>Recipes</h1>
       <ul>
         {recipes.map((recipe) => (
@@ -73,6 +74,7 @@ export const Home = () => {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 };
