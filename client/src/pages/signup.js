@@ -25,7 +25,6 @@ export const Signup = () => {
     };
   
     return (
-        <div className="recipe-base">
       <div className="auth-container">
         <form onSubmit={handleSubmit}>
           <h2>Register</h2>
@@ -53,7 +52,6 @@ export const Signup = () => {
           <h2>Already an User ?  <button className="button-switch"><Link to="/login">Login</Link></button></h2>
           
         </form>
-      </div>
       </div>
     );
   };
