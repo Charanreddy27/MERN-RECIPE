@@ -51,11 +51,14 @@ export const Home = () => {
     <div className="recipe-base">
       <div>
       <h1>Recipes</h1>
+      <br></br>
       <ul>
         {recipes.map((recipe) => (
           <li key={recipe._id}>
-            <div>
+            
+              <div className="save">
               <h2>{recipe.name}</h2>
+              <br/>
               <button
                 onClick={() => saveRecipe(recipe._id)}
                 disabled={isRecipeSaved(recipe._id)}
@@ -66,10 +69,13 @@ export const Home = () => {
 </svg> {isRecipeSaved(recipe._id) ? "Saved" : " Save"}
               </button>
             </div>
+            <br></br>
             <div className="instructions">
-              <p>{recipe.instructions}</p>
+              <p className="ins">{recipe.instructions}</p>
             </div>
+            <br></br>
             <img src={recipe.imageUrl} alt={recipe.name} />
+            <br></br>
             <p><strong>Cooking Time: </strong>{recipe.cookingTime} minutes</p>
           </li>
         ))}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useCookies } from "react-cookie";
 import { Link, useNavigate } from "react-router-dom";
+import {toast} from 'react-toastify'
 export const Login = () => {
     const [_, setCookies] = useCookies(["access_token"]);
   
@@ -22,6 +23,7 @@ export const Login = () => {
         setCookies("access_token", result.data.token);
         window.localStorage.setItem("userID", result.data.userID);
         navigate("/");
+        toast.success("Logged in successfully");
       } catch (error) {
         console.error(error);
       }

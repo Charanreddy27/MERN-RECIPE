@@ -39,6 +39,7 @@ export const Navbar=()=> {
 		navRef.current.classList.toggle(
 			"responsive_nav"
 		);
+    // navRef.current.classList.remove("responsive_nav");
 	};
 
 	  const [cookies, setCookies] = useCookies(["access_token"]);
