@@ -55,7 +55,7 @@ export const CreateRecipe = () => {
   };
 
   return (
-    <div className="create-recipe">
+    <div className="create-recipe recipe-base">
       <h2>Create Recipe</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>
