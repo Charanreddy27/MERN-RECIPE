@@ -5,7 +5,7 @@ import { userRouter } from "./routes/user.js";
 import { recipesRouter } from "./routes/recipes.js";
 
 const app = express();
-
+const MONGOURL = MONGOURI.config;
 app.use(express.json());
 app.use(cors());
 
@@ -13,7 +13,7 @@ app.use("/auth", userRouter);
 app.use("/recipes", recipesRouter);
 
 mongoose.connect(
-  "mongodb+srv://charanreddy:charanreddy@cluster0.po1pmbv.mongodb.net/recipie?retryWrites=true&w=majority",
+  MONGOURI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
